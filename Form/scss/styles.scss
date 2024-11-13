@@ -1,0 +1,72 @@
+body {
+	background-color: whitesmoke;
+}
+
+.main {
+	max-width: 1440px;
+	height: 90vh;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	width: 600px;
+	height: 240px;
+	padding: 20px;
+	background-color: white;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+	position: relative;
+	font-family: sans-serif;
+
+	&__label {
+		font-weight: 600;
+		font-size: 14px;
+		margin-bottom: 3px;
+	}
+
+	&__input {
+		margin-bottom: 20px;
+		padding: 8px;
+		padding-right: 30px;
+		border-radius: 5px;
+		border: 1px solid black;
+		position: relative;
+		background-color: rgb(250, 242, 221);
+	}
+
+	.input-error {
+		border-color: red;
+	}
+
+	.input-success {
+		border-color: green;
+	}
+
+	.fio-feedback,
+	.password-feedback {
+		position: relative;
+		top: -20px;
+		font-size: 12px;
+		width: 400px;
+		color: red;
+	}
+
+	&__button {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		border: none;
+		color: white;
+		background-color: blue;
+		padding: 10px 27px;
+		border-radius: 5px;
+		font-weight: 600;
+		cursor: pointer;
+	}
+}
