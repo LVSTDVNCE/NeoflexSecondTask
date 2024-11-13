@@ -1,0 +1,24 @@
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .input {
+  width: 60%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.main .list {
+  width: 40%;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+.main .list li {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}/*# sourceMappingURL=styles.css.map */
