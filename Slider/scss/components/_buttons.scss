@@ -1,0 +1,40 @@
+.btnWrapper {
+	display: flex;
+	gap: 15px;
+	position: absolute;
+	bottom: calc(50% - 270px);
+	transition: 150ms;
+
+	&__button {
+		width: 50px;
+		height: 50px;
+		border: none;
+		border-radius: 50%;
+		background-color: rgb(255, 255, 255);
+		color: white;
+		font-weight: 600;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	&__button:hover {
+		transform: scale(1.1);
+	}
+
+	&__button:disabled {
+		background-color: #ccc;
+		cursor: not-allowed;
+		box-shadow: none;
+
+		&:hover {
+			transform: scale(1);
+		}
+	}
+
+	& .right img {
+		transform: rotate(180deg);
+	}
+}

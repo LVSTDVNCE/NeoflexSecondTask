@@ -1,0 +1,32 @@
+@import './components/loader';
+@import './components/slider';
+@import './components/buttons';
+
+@mixin flex-center-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	pointer-events: none;
+}
+
+body {
+	background-color: whitesmoke;
+	font-family: sans-serif;
+}
+
+.main {
+	@include flex-center-center;
+	max-width: 1440px;
+	height: 100vh;
+	margin: 0 auto;
+	position: relative;
+}

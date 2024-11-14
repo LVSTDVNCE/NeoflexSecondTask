@@ -1,0 +1,176 @@
+.loader {
+  width: 48px;
+  height: 48px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #333;
+  display: none;
+}
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: -24px;
+  animation: animloader 4s ease infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: rgba(51, 122, 183, 0.85);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  animation: animloader2 2s ease infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 0 24px rgba(51, 122, 183, 0), 24px 24px rgba(51, 122, 183, 0), 24px 48px rgba(51, 122, 183, 0), 0px 48px rgba(51, 122, 183, 0);
+  }
+  12% {
+    box-shadow: 0 24px #337ab7, 24px 24px rgba(51, 122, 183, 0), 24px 48px rgba(51, 122, 183, 0), 0px 48px rgba(51, 122, 183, 0);
+  }
+  25% {
+    box-shadow: 0 24px #337ab7, 24px 24px #337ab7, 24px 48px rgba(51, 122, 183, 0), 0px 48px rgba(51, 122, 183, 0);
+  }
+  37% {
+    box-shadow: 0 24px #337ab7, 24px 24px #337ab7, 24px 48px #337ab7, 0px 48px rgba(51, 122, 183, 0);
+  }
+  50% {
+    box-shadow: 0 24px #337ab7, 24px 24px #337ab7, 24px 48px #337ab7, 0px 48px #337ab7;
+  }
+  62% {
+    box-shadow: 0 24px rgba(51, 122, 183, 0), 24px 24px #337ab7, 24px 48px #337ab7, 0px 48px #337ab7;
+  }
+  75% {
+    box-shadow: 0 24px rgba(51, 122, 183, 0), 24px 24px rgba(51, 122, 183, 0), 24px 48px #337ab7, 0px 48px #337ab7;
+  }
+  87% {
+    box-shadow: 0 24px rgba(51, 122, 183, 0), 24px 24px rgba(51, 122, 183, 0), 24px 48px rgba(51, 122, 183, 0), 0px 48px #337ab7;
+  }
+  100% {
+    box-shadow: 0 24px rgba(51, 122, 183, 0), 24px 24px rgba(51, 122, 183, 0), 24px 48px rgba(51, 122, 183, 0), 0px 48px rgba(51, 122, 183, 0);
+  }
+}
+@keyframes animloader2 {
+  0% {
+    transform: translate(0, 0) rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: translate(100%, 0) rotateX(0) rotateY(180deg);
+  }
+  50% {
+    transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg);
+  }
+  75% {
+    transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg);
+  }
+  100% {
+    transform: translate(0, 0) rotateX(0) rotateY(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  pointer-events: none;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  padding: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+}
+.slider__list {
+  display: flex;
+  padding: 10px;
+  gap: 30px;
+  list-style-type: none;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+.slider__list li {
+  width: 220px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 600;
+}
+.slider__list li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  bottom: calc(50% - 270px);
+  transition: 150ms;
+}
+.btnWrapper__button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.btnWrapper__button:hover {
+  transform: scale(1.1);
+}
+.btnWrapper__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.btnWrapper__button:disabled:hover {
+  transform: scale(1);
+}
+.btnWrapper .right img {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=styles.css.map */
