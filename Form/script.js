@@ -42,6 +42,7 @@ passwordInput.addEventListener('input', () => {
 
 	if (message.includes('Strong')) {
 		feedback.style.color = 'green'
+		feedback.textContent += ' ✓'
 		passwordInput.classList.add('input-success')
 		passwordInput.classList.remove('input-error')
 	} else {
@@ -54,10 +55,13 @@ passwordInput.addEventListener('input', () => {
 function checkFioInput(value) {
 	const onlyLetters = /^[A-Za-zА-Яа-яЁё\s]+$/
 	if (onlyLetters.test(value)) {
-		fioFeedback.textContent = ''
+		fioFeedback.style.color = 'green'
+		fioFeedback.textContent = 'Valid FIO'
+		fioFeedback.textContent += ' ✓'
 		fioInput.classList.add('input-success')
 		fioInput.classList.remove('input-error')
 	} else {
+		fioFeedback.style.color = 'red'
 		fioFeedback.textContent = 'FIO should contain only letters.'
 		fioInput.classList.add('input-error')
 		fioInput.classList.remove('input-success')
